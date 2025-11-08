@@ -12,7 +12,6 @@
 
 import math 
 from math import pow
-# , ceil, floor, factorial
 
 def pow(a,b):
     return a**b
