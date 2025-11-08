@@ -16,11 +16,5 @@ file.write("PLANET_NAME\t ORBITAL_PERIOD\t AXIAL_TILT\n")
 
 for planet in range(len(planet_names)):
 # for planet in len(planet_names):
-    # print(planet)
     planet_data = str(planet_names[planet])+ "\t" + str(orbital_periods[planet]) +"\t" + str(axial_tilts[planet]) + "\n"
     file.write(planet_data)
-
-    # file.write(planet_names[planet])
-    # file.write(orbital_periods[planet])
-    # file.write(axial_tilts[planet])
-    # file.write("\n")
