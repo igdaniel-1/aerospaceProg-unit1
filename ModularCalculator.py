@@ -1,3 +1,5 @@
+# Unit 1 - Question 4
+
 # Modular Calculator ➗
 # Write a calculator using the math module that contains the following features:
 
@@ -27,7 +29,7 @@ def factorialing(a):
 def modularCalculator():
     functionUsed = input("What operation are you performing (Exponential, Ceiling, Floor, Factorial) ? ")
 
-    print("function:",functionUsed)
+    # print("function:",functionUsed)
     functionUsed.strip()
 
     if (functionUsed == "Exponential") or (functionUsed == "exponential"):
