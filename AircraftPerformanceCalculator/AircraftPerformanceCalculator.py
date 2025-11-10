@@ -95,10 +95,14 @@ def calculate_distance(velocity, time):
 # save to aircraft_performance.txt
 def save_info_to_file(range_, endurance, total_weight, cg_position, lift, drag, weight, acceleration, velocity, distance, file):
     # INSERT CODE HERE
-    print('hey')
+    attributes = [range_, endurance, total_weight, cg_position, lift, drag, weight, acceleration, velocity, distance]
+    file = open(file, "w")
+    for prop in attributes:
+        file.write(str(prop))
+        file.write("\n")
 
 def main():
-    print('starting...')
+    print('Starting...')
 
     range_ = calculate_range(fuel_capacity, fuel_consumption_rate, true_air_speed)
     endurance = calculate_endurance(fuel_capacity, fuel_consumption_rate)
@@ -111,6 +115,11 @@ def main():
     velocity_ = calculate_velocity(velocity, acceleration, time)
     distance = calculate_distance(velocity, time)
 
+    # output info
     pretty_print(range_, endurance, total_weight, cg_position, lift, drag, weight, acceleration, velocity_, distance)
+
+    # save info to txt
+    file = "AircraftPerformanceCalculator/aircraft_performance_analysis.txt"
+    save_info_to_file(range_, endurance, total_weight, cg_position, lift, drag, weight, acceleration, velocity, distance, file)
 
 main()
