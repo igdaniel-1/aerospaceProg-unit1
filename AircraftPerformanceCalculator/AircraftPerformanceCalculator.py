@@ -96,3 +96,21 @@ def calculate_distance(velocity, time):
 def save_info_to_file(range_, endurance, total_weight, cg_position, lift, drag, weight, acceleration, velocity, distance, file):
     # INSERT CODE HERE
     print('hey')
+
+def main():
+    print('starting...')
+
+    range_ = calculate_range(fuel_capacity, fuel_consumption_rate, true_air_speed)
+    endurance = calculate_endurance(fuel_capacity, fuel_consumption_rate)
+    total_weight = calculate_total_weight(payload, fuel_weight)
+    cg_position = calculate_cg_position(moment_list, total_weight)
+    lift = calculate_lift(cl, rho, v, s)
+    drag = calculate_drag(cd, rho, v, s)
+    weight = calculate_weight(mass, g)
+    acceleration = calculate_acceleration(thrust, drag, weight, mass)
+    velocity_ = calculate_velocity(velocity, acceleration, time)
+    distance = calculate_distance(velocity, time)
+
+    pretty_print(range_, endurance, total_weight, cg_position, lift, drag, weight, acceleration, velocity_, distance)
+
+main()
